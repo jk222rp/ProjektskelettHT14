@@ -4,15 +4,16 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Julias presentation</title>
+		<!--<title>reveal.js - The HTML Presentation Framework</title>-->
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+<!--		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">   -->
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scal e=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
@@ -42,7 +43,172 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+			
+<!--MY PRESENTATION!!!-->
+
 				<section>
+					<p>Julia Källbergs</p>
+					<h1>Projektpresentation</h1>
+				</section>
+				
+				<section>
+					<section>
+						<h1>CSS 3</h1>
+						<h2>Layout med flexbox</h2>
+					</section>
+					
+					<section>
+						<img src="pics/flexbox-guide-site.png">
+						<a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox">http://css-tricks.com/snippets/css/a-guide-to-flexbox</a>
+					</section>
+				</section>
+				
+				<section data-transition="fade">
+					<img src="pics/flexcontaineritem.png">
+				</section>
+				
+				<section data-transition="fade">
+					<img src="pics/containers-and-items.png">
+				</section>
+				
+				<section data-transition="fade">
+					<img src="pics/containers.png">
+				</section>
+				
+				<section data-transition="fade">
+					<img src="pics/items.png">
+				</section>
+				
+				<section data-transition="fade">
+					<img src="pics/possible.png">
+				</section>
+				
+				<section>
+					<p>display: flex;</p>
+					<p>display: inline-flex;</p>
+				</section>
+				
+				<section data-transition="fade">
+					<p>Yttre "boxen"</p>
+					<p>(flex container)</p>
+					<pre><code data-trim contenteditable>
+#nav ul {
+	flex-direction: row;
+	/*row-reverse, column, column-reverse*/
+	flex-wrap: nowrap;
+	/*wrap, wrap-reverse*/
+	flex-flow: row nowrap;
+	/*(flex-direction flex-wrap)*/
+	justify-content: flex-start;
+	/*flex-end, center, space-between, space-around*/
+	align-items: stretch;
+	/*flex-start, flex-end, center, baseline*/
+	align-content: stretch;
+	/*flex-start, flex-end, center, space-between, space-around*/
+}
+					</pre></code>
+				</section>
+				
+				<section data-transition="fade">
+					<p>Inre "boxen"</p>
+					<p>(flex item)</p>
+					<pre><code data-trim contenteditable>
+#nav a {
+	order: 1;
+	/*1, 2, 3 osv.*/
+	flex-grow: 0;
+	/*1, 2, 3 osv. Storlek på denna item i förhållande till de andra*/
+	flex-shrink: 1;
+	/*gör denna item mindre*/
+	flex-basis: auto;
+	/*bas-storlek (tex. 50% eller 20px)*/
+	flex: 0 1 auto;
+	/*(flex-grow flex-shrink flex-basis)*/
+	align-self: auto;
+	/*flex-start, flex-end, center, baseline, stretch*/
+}
+					</pre></code>
+				</section>
+				
+				<section>
+					<img src="pics/layout.png">
+				</section>
+				
+				<section data-transition="fade">
+					<p>Koden för sidan</p>
+					<pre><code data-trim contenteditable>
+body {
+  display: flex;
+  justify-content: center;
+}
+#container {
+  flex: 0 1 960px;
+}
+#top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 60px;
+}
+#nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+					</pre></code>
+				</section>
+				
+				<section data-transition="fade">
+					<p>Koden för sidan med float</p>
+					<pre><code data-trim contenteditable>
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#header {
+  float: left;
+  height: 60px;
+}
+#nav {
+  float: right;
+  height: 60px;
+  width: 260px;
+}
+#nav a {
+  display: block;
+  float: left;
+}
+#content {
+  clear: both;
+}
+					</pre></code>
+				</section>
+			
+				<section>
+					<p>Stöd för webbläsare</p>
+					<img src="pics/caniuse-flexbox.png">
+					<a href="http://caniuse.com/#feat=flexbox" target="_blank">http://caniuse.com/#feat=flexbox</a>
+				</section>
+			
+				<section>
+					<h2>the end</h2>
+				</section>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+<!--HIS PRESENTATION!!!-->			
+<!--				<section>
 					<h1>Reveal.js</h1>
 					<h3>HTML Presentations Made Easy</h3>
 					<p>
@@ -63,7 +229,7 @@
 				</section>
 
 				<!-- Example of nested vertical slides -->
-				<section>
+<!--				<section>
 					<section>
 						<h2>Vertical Slides</h2>
 						<p>
@@ -352,6 +518,7 @@ function linkify( selector ) {
 					<h1>THE END</h1>
 					<h3>BY Hakim El Hattab / hakim.se</h3>
 				</section>
+-->
 
 			</div>
 
